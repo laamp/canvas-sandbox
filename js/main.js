@@ -1,7 +1,11 @@
 import 'css/main';
 
+import Game from 'js/game';
+
 window.addEventListener('DOMContentLoaded', () => {
   const canvas = document.getElementById("gameCanvas");
 
-  console.log('***', canvas);
+  const game = Game(canvas);
+
+  game.start();
 });

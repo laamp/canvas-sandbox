@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./js/game.js":
+/*!********************!*\
+  !*** ./js/game.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst SCREEN_WIDTH = 1024;\nconst SCREEN_HEIGHT = 768;\n\nconst Game = (canvas) => {\n  const canvasContext = canvas.getContext(\"2d\");\n  canvas.width = SCREEN_WIDTH;\n  canvas.height = SCREEN_HEIGHT;\n\n  const start = () => {\n    canvasContext.fillStyle = 'black';\n    canvasContext.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);\n  };\n\n  return { start };\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Game);\n\n\n//# sourceURL=webpack://canvas-sandbox/./js/game.js?");
+
+/***/ }),
+
 /***/ "./js/main.js":
 /*!********************!*\
   !*** ./js/main.js ***!
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var css_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! css/main */ \"./css/main.css\");\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  const canvas = document.getElementById(\"gameCanvas\");\n\n  console.log('***', canvas);\n});\n\n\n//# sourceURL=webpack://canvas-sandbox/./js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var css_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! css/main */ \"./css/main.css\");\n/* harmony import */ var js_game__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! js/game */ \"./js/game.js\");\n\n\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  const canvas = document.getElementById(\"gameCanvas\");\n\n  const game = (0,js_game__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(canvas);\n\n  game.start();\n});\n\n\n//# sourceURL=webpack://canvas-sandbox/./js/main.js?");
 
 /***/ }),
 
