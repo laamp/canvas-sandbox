@@ -1,7 +1,8 @@
 const path = require('path');
 
 module.exports = {
-  entry: './js/main.js',
+  entry: './scripts/main.ts',
+  devtool: 'inline-source-map',
   output: {
     filename: './bundle.js'
   },
@@ -9,16 +10,21 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
       }
     ]
   },
   resolve: {
-    extensions: ['.js', '.css', '.txt', '.png', '.*'],
+    extensions: ['.ts', '.js', '.css', '.txt', '.png', '.*'],
     modules: ['node_modules'],
     alias: {
-      css: path.resolve(__dirname, 'css/'),
-      js: path.resolve(__dirname, 'js/')
+      styles: path.resolve(__dirname, 'styles/'),
+      scripts: path.resolve(__dirname, 'scripts/')
     }
   }
 };
