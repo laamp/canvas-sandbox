@@ -1,0 +1,12 @@
+{
+  "name": "canvas-sandbox",
+  "version": "1.0.0",
+  "description": "Just messin' around",
+  "main": "scripts/main.js",
+  "repository": "git@github.com:laamp/canvas-sandbox.git",
+  "author": "Lance Smith <lance.matthew.smith@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.78.0"
+  }
+}
