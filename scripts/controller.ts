@@ -1,4 +1,4 @@
-export const userController = {
+export const controller = {
   left: false,
   right: false,
   up: false,
@@ -10,21 +10,21 @@ export const userController = {
 export const bindKeyHandlers = () => {
   window.onkeydown = e => {
     if (e.repeat) return;
-    if (e.key === 'a') userController.left = true;
-    if (e.key === 'd') userController.right = true;
-    if (e.key === 'w') userController.up = true;
-    if (e.key === 's') userController.down = true;
-    if (e.key === 'l') userController.jump = true;
-    if (e.key === 'k') userController.attack = true;
+    if (e.key === 'a') controller.left = true;
+    if (e.key === 'd') controller.right = true;
+    if (e.key === 'w') controller.up = true;
+    if (e.key === 's') controller.down = true;
+    if (e.key === 'l') controller.jump = true;
+    if (e.key === 'k') controller.attack = true;
   };
 
   window.onkeyup = e => {
     if (e.repeat) return;
-    if (e.key === 'a') userController.left = false;
-    if (e.key === 'd') userController.right = false;
-    if (e.key === 'w') userController.up = false;
-    if (e.key === 's') userController.down = false;
-    if (e.key === 'l') userController.jump = false;
-    if (e.key === 'k') userController.attack = false;
+    if (e.key === 'a') controller.left = false;
+    if (e.key === 'd') controller.right = false;
+    if (e.key === 'w') controller.up = false;
+    if (e.key === 's') controller.down = false;
+    if (e.key === 'l') controller.jump = false;
+    if (e.key === 'k') controller.attack = false;
   };
 };
