@@ -6,9 +6,9 @@ interface EntityArgs {
 }
 
 const Entity = ({ x, y, w, h }: EntityArgs) => {
-  const render = (ctx: CanvasRenderingContext2D) => {
-    ctx.fillStyle = 'red';
-    ctx.fillRect(x, y, w, h);
+  const render = (canvasCtx: CanvasRenderingContext2D): void => {
+    canvasCtx.fillStyle = 'white';
+    canvasCtx.fillRect(x, y, w, h);
   };
 
   return { render };
