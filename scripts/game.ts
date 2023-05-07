@@ -9,10 +9,6 @@ const GAME_STATE = {
   PAUSED: 'PAUSED'
 };
 
-export interface GameObjectsType {
-  player: typeof Entity;
-}
-
 const Game = (canvas: HTMLCanvasElement) => {
   // Screen setup
   const canvasCtx = canvas.getContext('2d');
@@ -21,7 +17,7 @@ const Game = (canvas: HTMLCanvasElement) => {
 
   // Game setup
   const gameState = GAME_STATE.PLAYING;
-  const gameObjects: GameObjectsType = { player: null };
+  const gameObjects = { player: null };
   const camera = Camera({ canvasCtx, gameObjects });
 
   // Entry point for game
