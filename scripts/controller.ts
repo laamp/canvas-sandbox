@@ -8,7 +8,7 @@ export const controller = {
 };
 
 export const bindKeyHandlers = () => {
-  window.onkeydown = e => {
+  window.onkeydown = (e) => {
     if (e.repeat) return;
     if (e.key === 'a') controller.left = true;
     if (e.key === 'd') controller.right = true;
@@ -18,7 +18,7 @@ export const bindKeyHandlers = () => {
     if (e.key === 'k') controller.attack = true;
   };
 
-  window.onkeyup = e => {
+  window.onkeyup = (e) => {
     if (e.repeat) return;
     if (e.key === 'a') controller.left = false;
     if (e.key === 'd') controller.right = false;
