@@ -4,12 +4,18 @@ import { bindKeyHandlers } from 'scripts/controller';
 import Camera from 'scripts/camera';
 import Entity from 'scripts/entity';
 
+import { GameObjects } from 'scripts/interfaces';
+
 const GAME_STATE = {
   PLAYING: 'PLAYING',
   PAUSED: 'PAUSED'
 };
 
-const Game = (canvas: HTMLCanvasElement) => {
+interface GameType {
+  start: () => void;
+}
+
+const Game = (canvas: HTMLCanvasElement): GameType => {
   // Screen setup
   const canvasCtx = canvas.getContext('2d');
   canvas.width = SCREEN_WIDTH;
@@ -17,7 +23,7 @@ const Game = (canvas: HTMLCanvasElement) => {
 
   // Game setup
   const gameState = GAME_STATE.PLAYING;
-  const gameObjects = { player: null };
+  const gameObjects: GameObjects = { player: null };
   const camera = Camera({ canvasCtx, gameObjects });
 
   // Entry point for game

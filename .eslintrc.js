@@ -4,12 +4,14 @@ module.exports = {
     'es2021': true,
     'node': true
   },
-  'extends': 'eslint:recommended',
+  'extends': ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+  'parser': '@typescript-eslint/parser',
   'parserOptions': {
     'ecmaVersion': 'latest',
     'sourceType': 'module'
   },
-  'parser': '@typescript-eslint/parser',
+  'plugins': ['@typescript-eslint'],
+  'root': true,
   'rules': {
     'prefer-const': 'error',
     'prefer-arrow-callback': 'error',
