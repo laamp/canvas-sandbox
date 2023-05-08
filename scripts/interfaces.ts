@@ -1,5 +1,5 @@
-import { EntityType } from 'scripts/entity';
+import { PlayerType } from 'scripts/actors/player';
 
 export interface GameObjects {
-  player: EntityType;
+  player: PlayerType;
 }
